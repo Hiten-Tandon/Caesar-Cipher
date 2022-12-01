@@ -40,13 +40,13 @@ public class CeasarII
     * @param original original character so that the casing of output can be deicided
     */
     private int alignShift(int rep, char original) {
-        if(Character.isUpperCase(s)) {
+        if(Character.isUpperCase(original)) {
             if(rep > Z){
                 rep -= 26;
             } else if(rep < A) {
-                decryptedChar += 26;
+                rep += 26;
             }
-        } else if(Character.isLowerCase(s)) {
+        } else if(Character.isLowerCase(original)) {
             if(rep > z) {
                 rep -= 26;
             } else if(rep < a) {
